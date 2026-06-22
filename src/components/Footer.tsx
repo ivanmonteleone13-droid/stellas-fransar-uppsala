@@ -43,11 +43,13 @@ export default function Footer() {
           <p className="font-semibold">Kontakt</p>
           <address className="mt-4 space-y-2 text-sm not-italic text-amber-100/80">
             <p>{getFullAddress()}</p>
-            <p>
-              <a href={business.phoneLink} className="hover:text-white">
-                {business.phone}
-              </a>
-            </p>
+            {business.phoneLink && business.phone ? (
+              <p>
+                <a href={business.phoneLink} className="hover:text-white">
+                  {business.phone}
+                </a>
+              </p>
+            ) : null}
           </address>
         </div>
       </div>

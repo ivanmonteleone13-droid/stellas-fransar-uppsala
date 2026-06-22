@@ -28,17 +28,19 @@ export default function ContactPage() {
                 <dt className="text-sm font-medium text-[#5C4033]/60">Adress</dt>
                 <dd className="mt-1 text-lg text-[#3D2914]">{getFullAddress()}</dd>
               </div>
-              <div>
-                <dt className="text-sm font-medium text-[#5C4033]/60">Telefon</dt>
-                <dd>
-                  <a
-                    href={business.phoneLink}
-                    className="text-lg font-semibold text-[#5C4033] hover:underline"
-                  >
-                    {business.phone}
-                  </a>
-                </dd>
-              </div>
+              {business.phoneLink && business.phone ? (
+                <div>
+                  <dt className="text-sm font-medium text-[#5C4033]/60">Telefon</dt>
+                  <dd>
+                    <a
+                      href={business.phoneLink}
+                      className="text-lg font-semibold text-[#5C4033] hover:underline"
+                    >
+                      {business.phone}
+                    </a>
+                  </dd>
+                </div>
+              ) : null}
             </dl>
 
             <div className="mt-10">
