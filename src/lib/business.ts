@@ -17,7 +17,7 @@ export const business = {
   bookingUrl: "https://www.bokadirekt.se/places/stellas-fransar-uppsala-131342",
   bookingLabel: "Boka på Bokadirekt",
   websiteUrl: null as string | null,
-  logoImage: null as string | null,
+  logoImage: "/images/logo.jpg" as string | null,
   heroImage: "/images/hero.jpg",
   aboutImage: "/images/gallery-2.jpg",
   facebookUrl: null as string | null,
