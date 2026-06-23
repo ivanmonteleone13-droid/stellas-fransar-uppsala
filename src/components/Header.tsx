@@ -20,22 +20,22 @@ export default function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-[#5C4033]/10 bg-[#FAF7F2]/95 backdrop-blur-md">
+    <header className="sticky top-0 z-50 border-b border-[var(--primary)]/10 bg-[var(--accent)]/95 backdrop-blur-md">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6">
         <Link href="/" className="group flex items-center gap-3">
-          <span
-            className="flex h-10 w-10 items-center justify-center rounded-full bg-[#5C4033] text-lg text-white shadow-md transition group-hover:bg-[#3D2914]"
-            aria-hidden
-          >
-            👞
-          </span>
+          {"logoImage" in business && business.logoImage ? (
+            <img src={business.logoImage as string} alt="" className="h-10 w-10 rounded-full object-contain bg-white p-1" />
+          ) : (
+            <span
+              className="flex h-10 w-10 items-center justify-center rounded-full bg-[var(--primary)] text-lg text-white shadow-md transition group-hover:bg-[var(--dark)]"
+              aria-hidden
+            >
+              ✨
+            </span>
+          )}
           <div>
-            <p className="text-lg font-bold tracking-tight text-[#3D2914]">
-              {business.name}
-            </p>
-            <p className="hidden text-xs text-[#5C4033]/70 sm:block">
-              {business.tagline}
-            </p>
+            <p className="text-lg font-bold tracking-tight text-[var(--primary)]">{business.name}</p>
+            <p className="hidden text-xs text-[var(--primary)]/70 sm:block">{business.tagline}</p>
           </div>
         </Link>
 
@@ -48,8 +48,8 @@ export default function Header() {
                 href={link.href}
                 className={`rounded-full px-4 py-2 text-sm font-medium transition ${
                   active
-                    ? "bg-[#5C4033] text-white"
-                    : "text-[#3D2914] hover:bg-amber-100"
+                    ? "bg-[var(--primary)] text-white"
+                    : "text-[var(--dark)] hover:bg-[var(--secondary)]/20"
                 }`}
               >
                 {link.label}
@@ -60,16 +60,15 @@ export default function Header() {
 
         <div className="hidden items-center gap-3 md:flex">
           {business.phoneLink && business.phone ? (
-            <a
-              href={business.phoneLink}
-              className="text-sm font-semibold text-[#5C4033] hover:underline"
-            >
+            <a href={business.phoneLink} className="text-sm font-semibold text-[var(--primary)] hover:underline">
               {business.phone}
             </a>
           ) : null}
           <a
             href={business.bookingUrl}
-            className="rounded-full bg-[#C9A227] px-5 py-2.5 text-sm font-semibold text-[#3D2914] shadow-sm transition hover:bg-[#b8921f]"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-full bg-[var(--secondary)] px-5 py-2.5 text-sm font-semibold text-[var(--dark)] shadow-sm transition hover:opacity-90"
           >
             {label}
           </a>
@@ -77,7 +76,7 @@ export default function Header() {
 
         <button
           type="button"
-          className="inline-flex items-center justify-center rounded-lg border border-amber-200 p-2 text-[#3D2914] md:hidden"
+          className="inline-flex items-center justify-center rounded-lg border border-[var(--primary)]/20 p-2 text-[var(--dark)] md:hidden"
           aria-expanded={open}
           aria-controls="mobile-menu"
           onClick={() => setOpen(!open)}
@@ -96,7 +95,7 @@ export default function Header() {
       {open && (
         <nav
           id="mobile-menu"
-          className="border-t border-[#5C4033]/10 bg-[#FAF7F2] px-4 py-4 md:hidden"
+          className="border-t border-[var(--primary)]/10 bg-[var(--accent)] px-4 py-4 md:hidden"
           aria-label="Mobilmeny"
         >
           <div className="flex flex-col gap-2">
@@ -105,14 +104,16 @@ export default function Header() {
                 key={link.href}
                 href={link.href}
                 onClick={() => setOpen(false)}
-                className="rounded-lg px-4 py-3 text-[#3D2914] hover:bg-amber-100"
+                className="rounded-lg px-4 py-3 text-[var(--dark)] hover:bg-[var(--secondary)]/20"
               >
                 {link.label}
               </Link>
             ))}
             <a
               href={business.bookingUrl}
-              className="mt-2 rounded-full bg-[#C9A227] px-4 py-3 text-center font-semibold text-[#3D2914]"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-2 rounded-full bg-[var(--secondary)] px-4 py-3 text-center font-semibold text-[var(--dark)]"
             >
               {label}
             </a>

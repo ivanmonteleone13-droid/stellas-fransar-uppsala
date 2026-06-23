@@ -17,6 +17,7 @@ export const business = {
   bookingUrl: "https://www.bokadirekt.se/places/stellas-fransar-uppsala-131342",
   bookingLabel: "Boka på Bokadirekt",
   websiteUrl: null as string | null,
+  logoImage: null as string | null,
   heroImage: "/images/hero.jpg",
   aboutImage: "/images/gallery-2.jpg",
   facebookUrl: null as string | null,
@@ -69,7 +70,7 @@ export const business = {
       icon: "✨",
       description: "Fransar för dig som vill ha ett naturligt resultat — skräddarsytt efter dina önskemål.",
       duration: "30–90 min",
-      priceFrom: null,
+      priceFrom: 800,
       note: "Kontakta oss för aktuella priser.",
     },
     {
@@ -96,7 +97,7 @@ export const business = {
       icon: "🌸",
       description: "Permanent lyfter ögonbrynen och gör de lättare att forma efter önskan.",
       duration: "30–90 min",
-      priceFrom: null,
+      priceFrom: 800,
       note: "Kontakta oss för aktuella priser.",
     },
     {
