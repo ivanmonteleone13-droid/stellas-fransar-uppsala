@@ -12,8 +12,7 @@ export default function ServicesSection() {
             Våra tjänster &amp; priser
           </h2>
           <p className="mt-4 text-lg text-[#6B3A5C]/70">
-            Allt från snabb skäggtrim till komplett hår &amp; skägg — boka den behandling
-            som passar dig.
+            Fransförlängning, lashlift och browlift — boka den behandling som passar dig.
           </p>
         </div>
         <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">

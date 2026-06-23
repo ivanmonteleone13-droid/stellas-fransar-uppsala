@@ -34,7 +34,7 @@ export default function ServicesPage() {
               </article>
             ))}
           </div>
-          <div className="mt-12 space-y-4 rounded-2xl border border-amber-200 bg-amber-50 p-6 text-sm text-amber-950">
+          <div className="mt-12 space-y-4 rounded-2xl border border-[var(--primary)]/20 bg-[var(--accent)] p-6 text-sm text-amber-950">
             <p><strong>Bokning:</strong> Kom boka via Bokadirekt.</p>
             <p><strong>Bokning:</strong> Boka enkelt online via Bokadirekt.</p>
           </div>

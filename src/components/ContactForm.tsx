@@ -14,11 +14,11 @@ export default function ContactForm() {
   if (submitted) {
     return (
       <div
-        className="rounded-2xl border border-amber-200 bg-amber-50 p-8 text-center"
+        className="rounded-2xl border border-[var(--primary)]/20 bg-[var(--accent)] p-8 text-center"
         role="status"
       >
-        <p className="text-lg font-semibold text-[#3D2914]">Tack för ditt meddelande!</p>
-        <p className="mt-2 text-sm text-[#5C4033]/70">
+        <p className="text-lg font-semibold text-[var(--dark)]">Tack för ditt meddelande!</p>
+        <p className="mt-2 text-sm text-[var(--primary)]/70">
           Detta är en demo-webbplats. Boka via Bokadirekt för att nå oss direkt.
         </p>
       </div>
@@ -28,12 +28,12 @@ export default function ContactForm() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="space-y-5 rounded-2xl border border-[#5C4033]/10 bg-white p-6 shadow-sm sm:p-8"
+      className="space-y-5 rounded-2xl border border-[var(--primary)]/10 bg-white p-6 shadow-sm sm:p-8"
       aria-label="Kontaktformulär"
     >
       <div className="grid gap-5 sm:grid-cols-2">
         <div>
-          <label htmlFor="name" className="mb-2 block text-sm font-medium text-[#3D2914]">
+          <label htmlFor="name" className="mb-2 block text-sm font-medium text-[var(--dark)]">
             Namn
           </label>
           <input
@@ -42,11 +42,11 @@ export default function ContactForm() {
             type="text"
             required
             autoComplete="name"
-            className="w-full rounded-xl border border-amber-200 px-4 py-3 text-sm outline-none ring-[#5C4033] focus:ring-2"
+            className="w-full rounded-xl border border-[var(--primary)]/20 px-4 py-3 text-sm outline-none ring-[var(--primary)] focus:ring-2"
           />
         </div>
         <div>
-          <label htmlFor="email" className="mb-2 block text-sm font-medium text-[#3D2914]">
+          <label htmlFor="email" className="mb-2 block text-sm font-medium text-[var(--dark)]">
             E-post
           </label>
           <input
@@ -55,13 +55,13 @@ export default function ContactForm() {
             type="email"
             required
             autoComplete="email"
-            className="w-full rounded-xl border border-amber-200 px-4 py-3 text-sm outline-none ring-[#5C4033] focus:ring-2"
+            className="w-full rounded-xl border border-[var(--primary)]/20 px-4 py-3 text-sm outline-none ring-[var(--primary)] focus:ring-2"
           />
         </div>
       </div>
 
       <div>
-        <label htmlFor="phone" className="mb-2 block text-sm font-medium text-[#3D2914]">
+        <label htmlFor="phone" className="mb-2 block text-sm font-medium text-[var(--dark)]">
           Telefon
         </label>
         <input
@@ -69,12 +69,12 @@ export default function ContactForm() {
           name="phone"
           type="tel"
           autoComplete="tel"
-          className="w-full rounded-xl border border-amber-200 px-4 py-3 text-sm outline-none ring-[#5C4033] focus:ring-2"
+          className="w-full rounded-xl border border-[var(--primary)]/20 px-4 py-3 text-sm outline-none ring-[var(--primary)] focus:ring-2"
         />
       </div>
 
       <div>
-        <label htmlFor="message" className="mb-2 block text-sm font-medium text-[#3D2914]">
+        <label htmlFor="message" className="mb-2 block text-sm font-medium text-[var(--dark)]">
           Meddelande
         </label>
         <textarea
@@ -82,14 +82,14 @@ export default function ContactForm() {
           name="message"
           rows={5}
           required
-          className="w-full rounded-xl border border-amber-200 px-4 py-3 text-sm outline-none ring-[#5C4033] focus:ring-2"
+          className="w-full rounded-xl border border-[var(--primary)]/20 px-4 py-3 text-sm outline-none ring-[var(--primary)] focus:ring-2"
           placeholder="Beskriv vad du behöver hjälp med..."
         />
       </div>
 
       <button
         type="submit"
-        className="w-full rounded-full bg-[#5C4033] px-8 py-4 text-sm font-semibold text-white transition hover:bg-[#3D2914] sm:w-auto"
+        className="w-full rounded-full bg-[var(--primary)] px-8 py-4 text-sm font-semibold text-white transition hover:bg-[var(--dark)] sm:w-auto"
       >
         Skicka meddelande
       </button>

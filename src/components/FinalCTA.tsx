@@ -4,7 +4,7 @@ export default function FinalCTA() {
   return (
     <section className="py-20">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <div className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-[#D4A574] to-[#e0c060] p-8 sm:p-12">
+        <div className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-[#D4A574] to-[var(--secondary)] p-8 sm:p-12">
           <div className="absolute -right-10 -top-10 h-40 w-40 rounded-full bg-white/20 blur-2xl" aria-hidden />
           <div className="relative grid gap-8 lg:grid-cols-2 lg:items-center">
             <div>
